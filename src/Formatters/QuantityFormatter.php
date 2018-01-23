@@ -27,7 +27,7 @@ class QuantityFormatter implements IFormatter
     public static function format($value)
     {
         $value = Utils::toString($value);
-        return MathHelper::decToHex($value),
+        return MathHelper::decToHex($value);
         //$bn = Utils::toBn($value);
         //return '0x' . $bn->toHex(true);
     }
