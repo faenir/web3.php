@@ -14,6 +14,7 @@ namespace Web3\Formatters;
 use InvalidArgumentException;
 use Web3\Utils;
 use Web3\Formatters\IFormatter;
+use App\Helpers\MathHelper;;
 
 class QuantityFormatter implements IFormatter
 {
@@ -26,8 +27,8 @@ class QuantityFormatter implements IFormatter
     public static function format($value)
     {
         $value = Utils::toString($value);
-        $bn = Utils::toBn($value);
-
-        return '0x' . $bn->toHex(true);
+        return MathHelper::decToHex($value),
+        //$bn = Utils::toBn($value);
+        //return '0x' . $bn->toHex(true);
     }
 }
